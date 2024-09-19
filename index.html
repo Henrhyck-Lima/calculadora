@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Primeiro teste com calculadora</h1>
+    <div class="conteudo">
+        <div class="soma">
+            <input type="number" name="valor1" id="valor1">
+            <input type="number" name="valor2" id="valor2">   
+        </div>
+    
+        <div class="operadores">
+
+            <input type="button" value="+" class="op"onclick="somar()">
+
+            <input type="button" value="-" class="op" onclick="subtrair()">
+
+            <input type="button" value="/" class="op" onclick="dividir()">
+
+            <input type="button" value="*" class="op" onclick="multiplicar()">
+        </div>
+        
+        <div id="resultado"></div>
+        
+    </div>
+
+
+    <script>
+        function somar() {
+            let v1 = document.querySelector('input#valor1');
+            let v2 = document.querySelector('input#valor2');
+            let resultado = document.querySelector('div#resultado');
+            let input1 = Number(v1.value);
+            let input2 = Number(v2.value);
+            let so = input1 + input2;
+
+            resultado.innerHTML = `${so}`
+        }
+        function subtrair(){
+            let v1 = document.querySelector('input#valor1');
+            let v2 = document.querySelector('input#valor2');
+            let resultado = document.querySelector('div#resultado');
+            let input1 = Number(v1.value);
+            let input2 = Number(v2.value);
+            let su = input1 - input2;
+
+            resultado.innerHTML = `${su}`
+        }
+        function dividir(){
+            let v1 = document.querySelector('input#valor1');
+            let v2 = document.querySelector('input#valor2');
+            let resultado = document.querySelector('div#resultado');
+            let input1 = Number(v1.value);
+            let input2 = Number(v2.value);
+            let di = input1 / input2;
+
+            resultado.innerHTML = `${di}`
+        }
+        function multiplicar(){
+            let v1 = document.querySelector('input#valor1');
+            let v2 = document.querySelector('input#valor2');
+            let resultado = document.querySelector('div#resultado');
+            let input1 = Number(v1.value);
+            let input2 = Number(v2.value);
+            let mu = input1 * input2;
+
+            resultado.innerHTML = `${mu}`
+        }
+    </script>
+</body>
+</html>
